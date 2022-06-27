@@ -399,23 +399,242 @@
 
 // 17
 
+//Console.Write("N: ");
+//int n = int.Parse(Console.ReadLine()),
+//    ni, max = 0, maxnum = 0, resnum = 0;
+
+//for (int i = 1; i <= n; i++)
+//{
+//    ni = int.Parse(Console.ReadLine());
+
+//    if (ni > max || (i == 1))
+//    {
+//        max = ni;
+//        maxnum = i;
+//        resnum = 0;
+//    }
+//    else if (ni == max)
+//    {
+//        resnum = i - 1 - maxnum;
+//    }
+//}
+//Console.WriteLine(resnum);
+
+
+// 20
+
+//int n, maxi = 0, mini = 0, i, r, min = 0, max = 0;
+
+//Console.Write("N:");
+//n = int.Parse(Console.ReadLine());
+
+//for (i = 1; i <= n; ++i)
+//{
+//    r = int.Parse(Console.ReadLine());
+
+//    if ((r < min) || (i == 1))
+//    {
+//        min = r;
+//        mini = 0;
+//    }
+
+//    if ((r > max) || (i == 1))
+//    {
+//        max = r;
+//        maxi = 0;
+//    }
+
+//    if (r == min) ++mini;
+//    else if (r == max) ++maxi;
+
+//}
+//Console.Write(mini + maxi);
+
+
+// 22
+
+//int n;
+//float min1 = 0, min2 = 0, r;
+
+//Console.Write("N:");
+//n = int.Parse(Console.ReadLine());
+
+//for (int i = 1; i <= n; ++i)
+//{
+//    r = int.Parse(Console.ReadLine());
+
+//    if (i == 1)
+//    {
+//        min1 = r;
+//        min2 = r;
+//    }
+
+//    if ((r < min2) && (r != min1))
+//    {
+//        if (r < min1)
+//        {
+//            min2 = min1;
+//            min1 = r;
+//        }
+//        else min2 = r;
+//    }
+
+//    if (min1 == min2) min2 = r;
+
+//}
+//Console.Write(min1 + " " + min2);
+
+
+// 23
+
+//Console.Write("N:");
+//int n = int.Parse(Console.ReadLine());
+//float max1 = 0, max2 = 0, max3 = 0, r;
+
+//for (int i = 1; i <= n; ++i)
+//{
+//    r = float.Parse(Console.ReadLine());
+
+//    if (i == 1)
+//    {
+//        max1 = r;
+//        max2 = r;
+//        max3 = r;
+//    }
+
+//    if ((r > max3) && (r != max1) && (r != max2))
+//    {
+//        if (r > max2)
+//        {
+//            if (r > max1)
+//            {
+//                max3 = max2;
+//                max2 = max1;
+//                max1 = r;
+//            }
+//            else
+//            {
+//                max3 = max2;
+//                max2 = r;
+//            }
+//        }
+//        else max3 = r;
+//    }
+
+//    if (max1 == max2) max2 = r;
+//    if ((max3 == max1) || (max3 == max2)) max3 = r;
+//}
+//Console.WriteLine(max1 + " " + max2 + " " + max3);
+
+
+// 24
+
+//Console.Write("N: ");
+//int n = int.Parse(Console.ReadLine());
+//float r1 = 0, r2 = 0, maxsum = 0;
+
+//for (int i = 1; i <= n; ++i)
+//{
+//    r2 = r1;
+//    r1 = float.Parse(Console.ReadLine());
+
+//    if (i == 2) maxsum = r2 + r1;
+//    if (r1 + r2 > maxsum) maxsum = r2 + r1;
+//}
+//Console.Write(maxsum);
+
+
+// 25
+
+
+//Console.Write("N: ");
+//int n = int.Parse(Console.ReadLine()), imul = 0;
+//float r1 = 0, r2 = 0, minmul = 0;
+
+
+//for (int i = 1; i <= n; ++i)
+//{
+//    r2 = r1;
+//    r1 = float.Parse(Console.ReadLine());
+
+//    if ((i == 2) || (r1 * r2 < minmul))
+//    {
+//        minmul = r2 * r1;
+//        imul = i;
+//    }
+
+//}
+//Console.Write(imul - 1 + " " + imul);
+
+
+// 26
+
+//Console.Write("N: ");
+//int n = int.Parse(Console.ReadLine()), ni, num = 0, maxnum = 0;
+
+//for (int i = 1; i <= n; i++)
+//{
+//    ni = int.Parse(Console.ReadLine());
+
+//    if (ni % 2 == 0) ++num;
+//    else
+//    {
+//        if (num > maxnum) maxnum = num;
+//        num = 0;
+//    }
+//}
+//if (num > maxnum) maxnum = num;
+//Console.WriteLine(maxnum);
+
+
+// 29
+
+//Console.Write("N:");
+//int n = int.Parse(Console.ReadLine()), ni = 0, nmin = 0, num = 0, maxnum = 0;
+
+//for (int i = 1; i <= n; ++i)
+//{
+//    ni = int.Parse(Console.ReadLine());
+//    if ((i == 1) || (ni < nmin))
+//    {
+//        nmin = ni;
+//        num = 0;
+//        maxnum = 0;
+//    }
+//    if (ni == nmin) ++num;
+//    else
+//    {
+//        if (num > maxnum) maxnum = num;
+//        num = 0;
+//    }
+//}
+//if ((num > maxnum) && (ni == nmin)) maxnum = num;
+
+//Console.Write(maxnum);
+
+// 30
+
 Console.Write("N: ");
-int n = int.Parse(Console.ReadLine()),
-    ni, max = 0, maxnum = 0, resnum = 0;
+int n = int.Parse(Console.ReadLine()), ni = 0, nmax = 0;
+int minnum = n, num = 0;
 
 for (int i = 1; i <= n; i++)
 {
     ni = int.Parse(Console.ReadLine());
 
-    if (ni > max || (i == 1))
+    if ((i == 1) || (ni > nmax))
     {
-        max = ni;
-        maxnum = i;
-        resnum = 0;
+        nmax = ni;
+        num = 0;
+        minnum = n;
     }
-    else if (ni == max)
+    if (ni == nmax) ++num;
+    else
     {
-        resnum = i - 1 - maxnum;
+        if (num < minnum) minnum = num;
+        num = 0;
     }
 }
-Console.WriteLine(resnum);
+if ((num < minnum) && (ni == nmax)) minnum = num;
+
+Console.Write(minnum);
